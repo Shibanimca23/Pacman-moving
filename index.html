@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PacMan</title>
+    
+    <style>
+      #pacman {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+        <img src="pacman1.jpg" alt="" id="pacman">
+    
+   <script>
+    
+
+    const pacman=document.getElementById("pacman");
+   
+    const pacmanImages=["./pacman1.jpg","./pacman2.jpg"]
+    const pacmanImages1=["./pacman3.jpg","./pacman4.jpg"]
+    let current_index=0;        
+    let position=0;
+    let direction=1;
+    function movepacman(){
+        position+=20 * direction;
+        if(position < 0 +10  || position > window.innerWidth - 100 ){
+            direction=-direction;   
+        } 
+            if(direction===1){
+            pacman.src=pacmanImages[current_index];
+        current_index=(current_index + 1) % pacmanImages.length;//here modulo is used to wrap around beginning when it reaches the end of the array
+       
+        
+            }
+            else{
+                pacman.src=pacmanImages1[current_index];
+        current_index=(current_index + 1) % pacmanImages1.length;
+       
+     }
+            setTimeout(movepacman,100)
+            pacman.style.left = position + 'px';
+            
+        }
+        
+    movepacman();
+   </script>
+</body>
+</html>
