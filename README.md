@@ -5,8 +5,10 @@ This is a simple web animation project that recreates the iconic Pac-Man charact
 
 1. Clone the repository or download the HTML file to your local computer.
 
-2. Open the HTML file (`index.html`) in a web browser.
+2. Open the HTML file index.html in a web browser.
 
 3. Watch Pac-Man move from side to side and change its mouth's appearance
 
-4. future enhancement: Add multiple types of animated obstacles with different behaviors to create variety and challenge in the animation.
+## future enhancement
+
+Add multiple types of animated obstacles with different behaviors to create variety and challenge in the animation.
